@@ -74,7 +74,7 @@ ggsave("Figure1.pdf",width = 12, height = 8, units = "in") #post processing edit
 
 ##############Estimate Freshwater Endmembers##############
 # Navigate to folder with Liujendijkt 2020 groundwater discharge and import data
-setwd("Liujendijkt_et_al_2020_Supplementary Data")
+setwd("Luijendijk_et_al_2020_Supplementary Data")
 gw_discharge=read.dbf("coastal_gw_discharge.dbf")
 reef_gw_discharge=subset(gw_discharge,coral_reef==1 & fsgds_best!=-99999)
 length(reef_gw_discharge$fsgds_best)
