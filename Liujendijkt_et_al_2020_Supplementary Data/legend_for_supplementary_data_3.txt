@@ -1,0 +1,50 @@
+Column	Unit	Description
+BASIN_ID		BASIN_ID assigned to each watershed by hydrosheds/hydrobasins (Lehner et al., 2013)
+ws_cent_x	decimal degree	longitude of the centroid of each watershed
+ws_cent_y	decimal degree	latitude of the centroid of each watershed
+ws_area	m^2	area of each watershed
+li_most		most common lithology acc. to Hartmann & Moosdorf (2012). numbers stands for the following lithology codes in their table 1: 1 su, 2 vb, 3 ss, 4 pb, 5 sm, 6 sc, 7 va, 8 mt, 9 pa, 10 vi, 11 wb, 12 py, 13 pi, 14 ev, 15 nd, 16 ig
+N_total	kg ha^-1	agricultural nitrogen application, following Potter et al. (2011)
+rchg_avg	m a^-1	recharge following de Graaf et al (2015)
+rchd_avg	mm a^-1	recharge following Döll and FIedler (2008)
+lgkm_avg	m^2 * 100	log-transformed permeability, following Gleeson et al. (2014)
+kunc_avg	m^2 * 100	uncertainty range of log-transformed permeability, following Gleeson et al. (2014)
+surf_avg	m^3 s^-1	surface runoff, following de Graaf et al., (2015)
+wtg_avg	m m^-1	average watertable gradient, derived from Fan et al. (2013)
+length	m	watershed length
+grad_min	m m^-1	topographic gradient, minimum estimate
+grad_max	m m^-1	topographic gradient, maximum estimate
+dxq_land	m	size of the zone with near shore terrestrial discharge
+dxq_sea	m	size of the zone with submarine groundwater discharge
+maxq	m a^-1	maximum discharge flux 
+wtg_mod	m m^-1	modeled average watertable gradient
+fsgd	m^2 a^-1	modeled fresh submarine groundwater discharge
+fsgd_min	m^2 a^-1	modeled fresh submarine groundwater discharge, minimum estimate
+fsgd_max	m^2 a^-1	modeled fresh submarine groundwater discharge, maximum estimate
+fsgdf	dimensionless	modeled fresh submarine groundwater discharge as a fraction of the recharge input
+fsgdf_min	dimensionless	modeled fresh submarine groundwater discharge as a fraction of the recharge input, minimum estimate
+fsgdf_max	dimensionless	modeled fresh submarine groundwater discharge as a fraction of the recharge input, maximum estimate
+fsgd3	m^3 a^-1	modeled fresh submarine groundwater discharge in m3/yr
+fsgd3_min	m^3 a^-1	modeled fresh submarine groundwater discharge in m3/yr, minimum estimate
+fsgd3_max	m^3 a^-1	modeled fresh submarine groundwater discharge in m3/yr, maximum estimate
+fsgds	dimensionless	fresh submarine groundwater discharge divided by the surface runoff by de Graaf (2015)
+fsgds_min	dimensionless	fresh submarine groundwater discharge divided by the surface runoff by de Graaf (2015), minimum estimate
+fsgds_max	dimensionless	fresh submarine groundwater discharge divided by the surface runoff by de Graaf (2015), maximum estimate
+nstd	m^2 a^-1	modeled near-shore terrestrial discharge
+nstd_min	m^2 a^-1	modeled near-shore terrestrial discharge, minimum estimate
+nstd_max	m^2 a^-1	modeled near-shore terrestrial discharge, maximum estimate
+nstdf	dimensionless	modeled near-shore terrestrial discharge as a fraction of the total recharge input
+nstdf_min	dimensionless	modeled near-shore terrestrial discharge as a fraction of the total recharge input, minimum estimate
+nstdf_max	dimensionless	modeled near-shore terrestrial discharge as a fraction of the total recharge input, maximum estimate
+nstd3	m^3 a^-1	modeled near-shore terrestrial discharge in m3/yr
+nstd3_min	m^3 a^-1	modeled near-shore terrestrial discharge in m3/yr, minimum estimate
+nstd3_max	m^3 a^-1	modeled near-shore terrestrial discharge in m3/yr, maximum estimate
+nstds	dimensionless	near-shore terrestrial discharge divided by the surface runoff by the Graaf (2015)
+nstds_min	dimensionless	near-shore terrestrial discharge divided by the surface runoff by the Graaf (2015), minimum estimate
+nstds_max	dimensionless	near-shore terrestrial discharge divided by the surface runoff by the Graaf (2015), maximum estimate
+estuary		coastal watersheds overlaps with an estuary, following Alder et al. (2003)
+salt_marsh		coastal watersheds overlaps with a salt marsh following McCowen et al. (2017)
+coral_reef		coastal watersheds within 500 m of a coral reef. location of coral reefs follows UNEP-WCMC et al. (2010)
+risk		coastal groundwater eutrophication risk. 1 is high risk. 0 is low risk
+risk_min		coastal groundwater eutrophication risk. 1 is high risk. 0 is low risk. minimum estimate
+risk_max		coastal groundwater eutrophication risk. 1 is high risk. 0 is low risk. maximum estimate
