@@ -5,6 +5,7 @@ library(patchwork)
 library(fs)
 library(broom)
 library(lmodel2)
+library(maps)
 
 ##############Construct Conceptual Diagram##############
 sal=seq(0,40,0.1) #sequence of salinity values
@@ -74,7 +75,7 @@ ggsave("Figure1.pdf",width = 12, height = 8, units = "in") #post processing edit
 
 ##############Estimate Freshwater Endmembers##############
 # Navigate to folder with Liujendijkt 2020 groundwater discharge and import data
-setwd("Luijendijk_et_al_2020_Supplementary Data")
+setwd("Liujendijkt_et_al_2020_Supplementary Data")
 gw_discharge=read.dbf("coastal_gw_discharge.dbf")
 reef_gw_discharge=subset(gw_discharge,coral_reef==1 & fsgds_best!=-99999)
 length(reef_gw_discharge$fsgds_best)
@@ -269,14 +270,12 @@ cyronak2018nta=cyronak2018_sal3 %>%
 ta_s_summaries= 
   cyronak2018 %>%
   group_by(source) %>%
-  do(model = lmodel2(ta ~ sal, data = ., range.y=NULL, range.x=NULL, nperm=99)) %>%
-  ungroup %>% 
-  transmute(source,SourceCoef = map(model, tidy)) %>% 
-  unnest(SourceCoef) %>%
+  do(broom::tidy(lmodel2(ta ~ sal, data = ., range.y=NULL, range.x=NULL, nperm=99))) %>%
   subset(method=="OLS")
 
 #Extract slopes and intercepts from TA vs. Salinity models
 ta_s_slopes=subset(ta_s_summaries,term=="Slope")
+write_csv(ta_s_slopes,'TableS1.csv')
 ta_s_intercepts=subset(ta_s_summaries,term=="Intercept")
 
 #Add intercepts column to Cyronak 2018 data to normalize TA
